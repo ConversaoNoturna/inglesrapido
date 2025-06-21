@@ -1,5 +1,5 @@
 // Aguarda o carregamento completo da página
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function() {
     
     // Inicializar todas as funcionalidades
     initCountdown();
@@ -7,15 +7,16 @@ document.addEventListener('DOMContentLoaded', function() {
     initScrollAnimations();
     initSmoothScroll();
     initHeaderScroll();
+    initVideoPlayer(); // Nova função para o player de vídeo
     
-    console.log('Método Accent - Página carregada com sucesso!');
+    console.log("Método Accent - Página carregada com sucesso!");
 });
 
 // Countdown Timer
 function initCountdown() {
-    const hoursElement = document.getElementById('hours');
-    const minutesElement = document.getElementById('minutes');
-    const secondsElement = document.getElementById('seconds');
+    const hoursElement = document.getElementById("hours");
+    const minutesElement = document.getElementById("minutes");
+    const secondsElement = document.getElementById("seconds");
     
     if (!hoursElement || !minutesElement || !secondsElement) return;
     
@@ -31,14 +32,14 @@ function initCountdown() {
             const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
             
-            hoursElement.textContent = hours.toString().padStart(2, '0');
-            minutesElement.textContent = minutes.toString().padStart(2, '0');
-            secondsElement.textContent = seconds.toString().padStart(2, '0');
+            hoursElement.textContent = hours.toString().padStart(2, "0");
+            minutesElement.textContent = minutes.toString().padStart(2, "0");
+            secondsElement.textContent = seconds.toString().padStart(2, "0");
         } else {
             // Quando o tempo acabar, reinicia o countdown
-            hoursElement.textContent = '00';
-            minutesElement.textContent = '00';
-            secondsElement.textContent = '00';
+            hoursElement.textContent = "00";
+            minutesElement.textContent = "00";
+            secondsElement.textContent = "00";
             
             // Reinicia para mais 24 horas
             setTimeout(() => {
@@ -54,26 +55,26 @@ function initCountdown() {
 
 // FAQ Accordion
 function initFAQ() {
-    const faqItems = document.querySelectorAll('.faq-item');
+    const faqItems = document.querySelectorAll(".faq-item");
     
     faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
+        const question = item.querySelector(".faq-question");
         
-        question.addEventListener('click', () => {
-            const isActive = item.classList.contains('active');
+        question.addEventListener("click", () => {
+            const isActive = item.classList.contains("active");
             
             // Fecha todos os outros itens
             faqItems.forEach(otherItem => {
                 if (otherItem !== item) {
-                    otherItem.classList.remove('active');
+                    otherItem.classList.remove("active");
                 }
             });
             
             // Toggle do item atual
             if (isActive) {
-                item.classList.remove('active');
+                item.classList.remove("active");
             } else {
-                item.classList.add('active');
+                item.classList.add("active");
             }
         });
     });
@@ -83,18 +84,18 @@ function initFAQ() {
 function initScrollAnimations() {
     const observerOptions = {
         threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        rootMargin: "0px 0px -50px 0px"
     };
     
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate-on-scroll');
+                entry.target.classList.add("animate-on-scroll");
                 
                 // Para elementos com delay
                 const delay = entry.target.dataset.delay;
                 if (delay) {
-                    entry.target.style.animationDelay = delay + 'ms';
+                    entry.target.style.animationDelay = delay + "ms";
                 }
             }
         });
@@ -118,22 +119,22 @@ function initScrollAnimations() {
 
 // Scroll Suave
 function initSmoothScroll() {
-    const links = document.querySelectorAll('a[href^="#"]');
+    const links = document.querySelectorAll("a[href^=\"#\"]");
     
     links.forEach(link => {
-        link.addEventListener('click', (e) => {
+        link.addEventListener("click", (e) => {
             e.preventDefault();
             
-            const targetId = link.getAttribute('href');
+            const targetId = link.getAttribute("href");
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
-                const headerHeight = document.querySelector('.header').offsetHeight;
+                const headerHeight = document.querySelector(".header").offsetHeight;
                 const targetPosition = targetElement.offsetTop - headerHeight - 20;
                 
                 window.scrollTo({
                     top: targetPosition,
-                    behavior: 'smooth'
+                    behavior: "smooth"
                 });
             }
         });
@@ -142,25 +143,25 @@ function initSmoothScroll() {
 
 // Header com efeito de scroll
 function initHeaderScroll() {
-    const header = document.querySelector('.header');
+    const header = document.querySelector(".header");
     let lastScrollY = window.scrollY;
     
-    window.addEventListener('scroll', () => {
+    window.addEventListener("scroll", () => {
         const currentScrollY = window.scrollY;
         
         if (currentScrollY > 100) {
-            header.style.background = 'rgba(255, 255, 255, 0.95)';
-            header.style.backdropFilter = 'blur(10px)';
+            header.style.background = "rgba(255, 255, 255, 0.95)";
+            header.style.backdropFilter = "blur(10px)";
         } else {
-            header.style.background = '#ffffff';
-            header.style.backdropFilter = 'none';
+            header.style.background = "#ffffff";
+            header.style.backdropFilter = "none";
         }
         
         // Esconde/mostra header baseado na direção do scroll
         if (currentScrollY > lastScrollY && currentScrollY > 200) {
-            header.style.transform = 'translateY(-100%)';
+            header.style.transform = "translateY(-100%)";
         } else {
-            header.style.transform = 'translateY(0)';
+            header.style.transform = "translateY(0)";
         }
         
         lastScrollY = currentScrollY;
@@ -169,20 +170,20 @@ function initHeaderScroll() {
 
 // Função para scroll até a oferta
 function scrollToOffer() {
-    const offerSection = document.querySelector('.offer-section');
+    const offerSection = document.querySelector(".offer-section");
     if (offerSection) {
-        const headerHeight = document.querySelector('.header').offsetHeight;
+        const headerHeight = document.querySelector(".header").offsetHeight;
         const targetPosition = offerSection.offsetTop - headerHeight - 20;
         
         window.scrollTo({
             top: targetPosition,
-            behavior: 'smooth'
+            behavior: "smooth"
         });
         
         // Adiciona efeito de destaque na seção
-        offerSection.style.animation = 'pulse 1s ease-in-out';
+        offerSection.style.animation = "pulse 1s ease-in-out";
         setTimeout(() => {
-            offerSection.style.animation = '';
+            offerSection.style.animation = "";
         }, 1000);
     }
 }
@@ -193,18 +194,18 @@ function checkout() {
     const button = event.target;
     const originalText = button.innerHTML;
     
-    button.innerHTML = 'Processando...';
-    button.classList.add('loading');
+    button.innerHTML = "Processando...";
+    button.classList.add("loading");
     button.disabled = true;
     
     // Simula processamento
     setTimeout(() => {
         // Aqui você integraria com seu sistema de pagamento real
-        alert('Redirecionando para o checkout seguro...\n\nEm uma implementação real, aqui seria integrado com:\n- Stripe\n- PayPal\n- PagSeguro\n- Mercado Pago\n- Ou outro gateway de pagamento');
+        alert("Redirecionando para o checkout seguro...\n\nEm uma implementação real, aqui seria integrado com:\n- Stripe\n- PayPal\n- PagSeguro\n- Mercado Pago\n- Ou outro gateway de pagamento");
         
         // Restaura o botão
         button.innerHTML = originalText;
-        button.classList.remove('loading');
+        button.classList.remove("loading");
         button.disabled = false;
     }, 2000);
 }
@@ -212,32 +213,32 @@ function checkout() {
 // Tracking de eventos (para analytics)
 function trackEvent(eventName, eventData = {}) {
     // Aqui você integraria com Google Analytics, Facebook Pixel, etc.
-    console.log('Event tracked:', eventName, eventData);
+    console.log("Event tracked:", eventName, eventData);
     
     // Exemplo de integração com Google Analytics
-    if (typeof gtag !== 'undefined') {
-        gtag('event', eventName, eventData);
+    if (typeof gtag !== "undefined") {
+        gtag("event", eventName, eventData);
     }
     
     // Exemplo de integração com Facebook Pixel
-    if (typeof fbq !== 'undefined') {
-        fbq('track', eventName, eventData);
+    if (typeof fbq !== "undefined") {
+        fbq("track", eventName, eventData);
     }
 }
 
 // Adiciona tracking aos botões CTA
-document.addEventListener('click', (e) => {
-    if (e.target.classList.contains('cta-button')) {
-        trackEvent('cta_click', {
+document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("cta-button")) {
+        trackEvent("cta_click", {
             button_text: e.target.textContent.trim(),
-            page_section: e.target.closest('section')?.className || 'unknown'
+            page_section: e.target.closest("section")?.className || "unknown"
         });
     }
 });
 
 // Tracking de scroll depth
 let maxScrollDepth = 0;
-window.addEventListener('scroll', () => {
+window.addEventListener("scroll", () => {
     const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
     
     if (scrollDepth > maxScrollDepth) {
@@ -245,20 +246,20 @@ window.addEventListener('scroll', () => {
         
         // Trackeia marcos importantes
         if (scrollDepth >= 25 && maxScrollDepth < 25) {
-            trackEvent('scroll_depth', { depth: '25%' });
+            trackEvent("scroll_depth", { depth: "25%" });
         } else if (scrollDepth >= 50 && maxScrollDepth < 50) {
-            trackEvent('scroll_depth', { depth: '50%' });
+            trackEvent("scroll_depth", { depth: "50%" });
         } else if (scrollDepth >= 75 && maxScrollDepth < 75) {
-            trackEvent('scroll_depth', { depth: '75%' });
+            trackEvent("scroll_depth", { depth: "75%" });
         } else if (scrollDepth >= 90 && maxScrollDepth < 90) {
-            trackEvent('scroll_depth', { depth: '90%' });
+            trackEvent("scroll_depth", { depth: "90%" });
         }
     }
 });
 
 // Detecta quando o usuário está prestes a sair da página
 let exitIntentShown = false;
-document.addEventListener('mouseleave', (e) => {
+document.addEventListener("mouseleave", (e) => {
     if (e.clientY <= 0 && !exitIntentShown) {
         exitIntentShown = true;
         showExitIntent();
@@ -267,39 +268,39 @@ document.addEventListener('mouseleave', (e) => {
 
 function showExitIntent() {
     // Aqui você pode mostrar um popup de última chance
-    const confirmed = confirm('Espere! Não perca esta oportunidade única!\n\nVocê está prestes a perder 60% de desconto no Método Accent.\n\nClique em "OK" para garantir sua vaga com desconto ou "Cancelar" para sair.');
+    const confirmed = confirm("Espere! Não perca esta oportunidade única!\n\nVocê está prestes a perder 60% de desconto no Método Accent.\n\nClique em \"OK\" para garantir sua vaga com desconto ou \"Cancelar\" para sair.");
     
     if (confirmed) {
         scrollToOffer();
-        trackEvent('exit_intent_conversion');
+        trackEvent("exit_intent_conversion");
     } else {
-        trackEvent('exit_intent_dismissed');
+        trackEvent("exit_intent_dismissed");
     }
 }
 
 // Adiciona efeitos de hover personalizados
-document.addEventListener('mouseover', (e) => {
-    if (e.target.classList.contains('cta-button')) {
-        e.target.style.transform = 'translateY(-2px) scale(1.02)';
+document.addEventListener("mouseover", (e) => {
+    if (e.target.classList.contains("cta-button")) {
+        e.target.style.transform = "translateY(-2px) scale(1.02)";
     }
 });
 
-document.addEventListener('mouseout', (e) => {
-    if (e.target.classList.contains('cta-button')) {
-        e.target.style.transform = '';
+document.addEventListener("mouseout", (e) => {
+    if (e.target.classList.contains("cta-button")) {
+        e.target.style.transform = "";
     }
 });
 
 // Lazy loading para imagens (se houver)
 function initLazyLoading() {
-    const images = document.querySelectorAll('img[data-src]');
+    const images = document.querySelectorAll("img[data-src]");
     
     const imageObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const img = entry.target;
                 img.src = img.dataset.src;
-                img.classList.remove('lazy');
+                img.classList.remove("lazy");
                 imageObserver.unobserve(img);
             }
         });
@@ -309,18 +310,18 @@ function initLazyLoading() {
 }
 
 // Inicializa lazy loading se houver imagens
-if (document.querySelectorAll('img[data-src]').length > 0) {
+if (document.querySelectorAll("img[data-src]").length > 0) {
     initLazyLoading();
 }
 
 // Função para adicionar urgência dinâmica
 function updateUrgencyMessages() {
-    const urgencyElements = document.querySelectorAll('.urgency-badge, .urgency-text');
+    const urgencyElements = document.querySelectorAll(".urgency-badge, .urgency-text");
     const messages = [
-        '🔥 OFERTA LIMITADA - Apenas 48 horas restantes!',
-        '⚠️ Últimas vagas disponíveis!',
-        '🚨 Promoção expira em breve!',
-        '⏰ Tempo limitado - Não perca!'
+        "🔥 OFERTA LIMITADA - Apenas 48 horas restantes!",
+        "⚠️ Últimas vagas disponíveis!",
+        "🚨 Promoção expira em breve!",
+        "⏰ Tempo limitado - Não perca!"
     ];
     
     urgencyElements.forEach((element, index) => {
@@ -336,7 +337,7 @@ setInterval(updateUrgencyMessages, 30000); // A cada 30 segundos
 // Adiciona efeito de digitação ao título principal
 function typeWriter(element, text, speed = 100) {
     let i = 0;
-    element.innerHTML = '';
+    element.innerHTML = "";
     
     function type() {
         if (i < text.length) {
@@ -350,8 +351,8 @@ function typeWriter(element, text, speed = 100) {
 }
 
 // Aplica efeito de digitação quando a página carrega
-window.addEventListener('load', () => {
-    const heroTitle = document.querySelector('.hero-title');
+window.addEventListener("load", () => {
+    const heroTitle = document.querySelector(".hero-title");
     if (heroTitle) {
         const originalText = heroTitle.textContent;
         setTimeout(() => {
@@ -362,8 +363,8 @@ window.addEventListener('load', () => {
 
 // Adiciona partículas de fundo (opcional)
 function createParticles() {
-    const particlesContainer = document.createElement('div');
-    particlesContainer.className = 'particles-container';
+    const particlesContainer = document.createElement("div");
+    particlesContainer.className = "particles-container";
     particlesContainer.style.cssText = `
         position: fixed;
         top: 0;
@@ -376,7 +377,7 @@ function createParticles() {
     `;
     
     for (let i = 0; i < 50; i++) {
-        const particle = document.createElement('div');
+        const particle = document.createElement("div");
         particle.style.cssText = `
             position: absolute;
             width: 2px;
@@ -394,7 +395,7 @@ function createParticles() {
 }
 
 // CSS para animação das partículas
-const particleStyles = document.createElement('style');
+const particleStyles = document.createElement("style");
 particleStyles.textContent = `
     @keyframes float {
         0% {
@@ -420,24 +421,24 @@ document.head.appendChild(particleStyles);
 
 // Função para salvar progresso do usuário (localStorage)
 function saveUserProgress(section) {
-    const progress = JSON.parse(localStorage.getItem('metodoAccentProgress') || '{}');
+    const progress = JSON.parse(localStorage.getItem("metodoAccentProgress") || "{}");
     progress[section] = new Date().toISOString();
     progress.lastVisit = new Date().toISOString();
-    localStorage.setItem('metodoAccentProgress', JSON.stringify(progress));
+    localStorage.setItem("metodoAccentProgress", JSON.stringify(progress));
 }
 
 // Salva progresso quando o usuário interage com seções importantes
-document.addEventListener('click', (e) => {
-    const section = e.target.closest('section');
+document.addEventListener("click", (e) => {
+    const section = e.target.closest("section");
     if (section) {
-        const sectionClass = section.className.split(' ')[0];
+        const sectionClass = section.className.split(" ")[0];
         saveUserProgress(sectionClass);
     }
 });
 
 // Mostra mensagem de boas-vindas para usuários recorrentes
 function showWelcomeMessage() {
-    const progress = JSON.parse(localStorage.getItem('metodoAccentProgress') || '{}');
+    const progress = JSON.parse(localStorage.getItem("metodoAccentProgress") || "{}");
     
     if (progress.lastVisit) {
         const lastVisit = new Date(progress.lastVisit);
@@ -446,10 +447,10 @@ function showWelcomeMessage() {
         
         if (daysSinceLastVisit > 0 && daysSinceLastVisit < 7) {
             setTimeout(() => {
-                const message = `Bem-vindo de volta! Você visitou nossa página há ${daysSinceLastVisit} dia${daysSinceLastVisit > 1 ? 's' : ''}. A oferta especial ainda está disponível!`;
+                const message = `Bem-vindo de volta! Você visitou nossa página há ${daysSinceLastVisit} dia${daysSinceLastVisit > 1 ? "s" : ""}. A oferta especial ainda está disponível!`;
                 
                 // Cria notificação discreta
-                const notification = document.createElement('div');
+                const notification = document.createElement("div");
                 notification.style.cssText = `
                     position: fixed;
                     top: 100px;
@@ -471,12 +472,12 @@ function showWelcomeMessage() {
                 
                 // Anima entrada
                 setTimeout(() => {
-                    notification.style.transform = 'translateX(0)';
+                    notification.style.transform = "translateX(0)";
                 }, 100);
                 
                 // Remove após 5 segundos
                 setTimeout(() => {
-                    notification.style.transform = 'translateX(100%)';
+                    notification.style.transform = "translateX(100%)";
                     setTimeout(() => {
                         document.body.removeChild(notification);
                     }, 300);
@@ -493,35 +494,35 @@ showWelcomeMessage();
 // Adiciona funcionalidade de compartilhamento social
 function shareOnSocial(platform) {
     const url = encodeURIComponent(window.location.href);
-    const text = encodeURIComponent('Descobri o Método Accent - transforma seu sotaque em inglês em 30 dias!');
+    const text = encodeURIComponent("Descobri o Método Accent - transforma seu sotaque em inglês em 30 dias!");
     
-    let shareUrl = '';
+    let shareUrl = "";
     
     switch(platform) {
-        case 'facebook':
+        case "facebook":
             shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
             break;
-        case 'twitter':
+        case "twitter":
             shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
             break;
-        case 'whatsapp':
+        case "whatsapp":
             shareUrl = `https://wa.me/?text=${text}%20${url}`;
             break;
-        case 'linkedin':
+        case "linkedin":
             shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
             break;
     }
     
     if (shareUrl) {
-        window.open(shareUrl, '_blank', 'width=600,height=400');
-        trackEvent('social_share', { platform: platform });
+        window.open(shareUrl, "_blank", "width=600,height=400");
+        trackEvent("social_share", { platform: platform });
     }
 }
 
 // Adiciona botões de compartilhamento (se necessário)
 function addSocialShareButtons() {
-    const shareContainer = document.createElement('div');
-    shareContainer.className = 'social-share';
+    const shareContainer = document.createElement("div");
+    shareContainer.className = "social-share";
     shareContainer.style.cssText = `
         position: fixed;
         left: 20px;
@@ -533,10 +534,10 @@ function addSocialShareButtons() {
         z-index: 1000;
     `;
     
-    const platforms = ['facebook', 'twitter', 'whatsapp', 'linkedin'];
+    const platforms = ["facebook", "twitter", "whatsapp", "linkedin"];
     
     platforms.forEach(platform => {
-        const button = document.createElement('button');
+        const button = document.createElement("button");
         button.style.cssText = `
             width: 50px;
             height: 50px;
@@ -551,8 +552,8 @@ function addSocialShareButtons() {
         
         button.innerHTML = getShareIcon(platform);
         button.onclick = () => shareOnSocial(platform);
-        button.onmouseover = () => button.style.transform = 'scale(1.1)';
-        button.onmouseout = () => button.style.transform = 'scale(1)';
+        button.onmouseover = () => button.style.transform = "scale(1.1)";
+        button.onmouseout = () => button.style.transform = "scale(1)";
         
         shareContainer.appendChild(button);
     });
@@ -562,16 +563,34 @@ function addSocialShareButtons() {
 
 function getShareIcon(platform) {
     const icons = {
-        facebook: '📘',
-        twitter: '🐦',
-        whatsapp: '💬',
-        linkedin: '💼'
+        facebook: "📘",
+        twitter: "🐦",
+        whatsapp: "💬",
+        linkedin: "💼"
     };
-    return icons[platform] || '📤';
+    return icons[platform] || "📤";
 }
 
 // Descomente para adicionar botões de compartilhamento
 // addSocialShareButtons();
 
-console.log('🚀 Método Accent - Todos os scripts carregados com sucesso!');
+// Função para inicializar o player de vídeo
+function initVideoPlayer() {
+    const videoPlaceholder = document.querySelector(".video-placeholder");
+    if (videoPlaceholder) {
+        videoPlaceholder.addEventListener("click", () => {
+            const videoContainer = videoPlaceholder.closest(".video-container");
+            if (videoContainer) {
+                videoContainer.innerHTML = `
+                    <div style="padding:56.25% 0 0 0;position:relative;">
+                        <iframe src="https://player.vimeo.com/video/1095167562?h=0af30850c9&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Método Accent"></iframe>
+                    </div>
+                    <script src="https://player.vimeo.com/api/player.js"></script>
+                `;
+            }
+        });
+    }
+}
+
+console.log("🚀 Método Accent - Todos os scripts carregados com sucesso!");
 
