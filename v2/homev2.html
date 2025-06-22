@@ -1,41 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Transforme seu sotaque em inglês em apenas 30 dias com o Método Accent - O sistema revolucionário que já ajudou mais de 10.000 brasileiros a falarem inglês com confiança">
+    <meta name="description"
+        content="Domine o sotaque americano em 30 dias com o Método Accent. Mais de 10.000 brasileiros já transformaram seu inglês. Garantia de 30 dias ou seu dinheiro de volta.">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Método Accent - Domine o Sotaque Americano em 30 Dias">
-    <meta property="og:description" content="O único método que garante resultados ou seu dinheiro de volta. Mais de 10.000 alunos já transformaram seu inglês.">
+    <meta property="og:description"
+        content="O único método científico que garante resultados. Mais de 10.000 alunos já transformaram seu inglês com garantia total.">
     <meta property="og:image" content="https://media.atomicatpages.net/Images/ogimage.png">
-    
+
     <title>Método Accent - Domine o Sotaque Americano em 30 Dias | Garantia Total</title>
-    
+
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
-    
+
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/webp" href="https://media.atomicatpages.net/u/mGHgaAHOiQOp9e250OOGHN0Gthq2/Pictures/XBsybm9886636.webp">
+    <link rel="shortcut icon" type="image/webp"
+        href="https://media.atomicatpages.net/u/mGHgaAHOiQOp9e250OOGHN0Gthq2/Pictures/XBsybm9886636.webp">
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <h1>Método Accent</h1>
+                    <h1>Método <span class="accent">Accent</span></h1>
                 </div>
                 <nav class="nav">
                     <a href="#como-funciona" class="nav-link">Como Funciona</a>
                     <a href="#depoimentos" class="nav-link">Depoimentos</a>
                     <a href="#garantia" class="nav-link">Garantia</a>
+                    <a href="#oferta" class="nav-link cta-header">Oferta Especial</a>
                 </nav>
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </header>
@@ -46,60 +61,73 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <div class="urgency-badge">
-                        🔥 OFERTA LIMITADA - Apenas 48 horas restantes!
+                        🔥 OFERTA LIMITADA - Termina em <span id="countdown-hero">23:59:45</span>
                     </div>
-                    
+
                     <h1 class="hero-title">
-                        Domine o <span class="highlight">Sotaque Americano</span> 
-                        em Apenas 30 Dias
+                        Domine o Sotaque Americano em 30 Dias e Acelere Sua Carreira
+                        Internacional
                     </h1>
-                    
+
                     <p class="hero-subtitle">
-                        O único método científico que transforma brasileiros em falantes nativos de inglês. 
-                        <strong>Mais de 10.000 alunos já conseguiram!</strong>
+                        O único método científico que já transformou <strong>mais de 10.000 brasileiros</strong> em
+                        falantes nativos. Resultados comprovados ou seu dinheiro de volta.
                     </p>
-                    
-                    <div class="benefits-list">
+
+                    <div class="benefits-grid">
                         <div class="benefit-item">
-                            <span class="check-icon">✅</span>
-                            <span>Pronuncie qualquer palavra como um americano</span>
+                            <div class="benefit-icon">🎯</div>
+                            <span>Pronuncie qualquer palavra como um nativo americano</span>
                         </div>
                         <div class="benefit-item">
-                            <span class="check-icon">✅</span>
+                            <div class="benefit-icon">🌍</div>
                             <span>Seja compreendido em qualquer lugar do mundo</span>
                         </div>
                         <div class="benefit-item">
-                            <span class="check-icon">✅</span>
-                            <span>Ganhe confiança para falar em público</span>
+                            <div class="benefit-icon">💼</div>
+                            <span>Ganhe confiança para apresentações internacionais</span>
                         </div>
                         <div class="benefit-item">
-                            <span class="check-icon">✅</span>
-                            <span>Acelere sua carreira internacional</span>
+                            <div class="benefit-icon">🚀</div>
+                            <span>Acelere sua carreira com fluência profissional</span>
                         </div>
                     </div>
-                    
+
                     <div class="cta-section">
-                        <div class="price-section">
-                            <div class="old-price">De R$ 497</div>
-                            <div class="current-price">Por apenas R$ 197</div>
-                            <div class="discount-badge">60% OFF</div>
+                        <div class="price-highlight">
+                            <div class="price-old">De R$ 347</div>
+                            <div class="price-current">Por apenas <span class="price-value">R$ 27</span></div>
+                            <div class="discount-badge">92% OFF</div>
                         </div>
-                        
+
                         <button class="cta-button primary" onclick="scrollToOffer()">
-                            🚀 QUERO TRANSFORMAR MEU INGLÊS AGORA
+                            🚀 QUERO MEU SOTAQUE AMERICANO AGORA
                         </button>
-                        
-                        <div class="guarantee-text">
-                            ✅ Garantia incondicional de 30 dias ou seu dinheiro de volta
+
+                        <div class="guarantee-mini">
+                            <div class="guarantee-icon">🛡️</div>
+                            <span>Garantia incondicional de 30 dias ou 100% do dinheiro de volta</span>
+                        </div>
+
+                        <div class="payment-info">
+                            💳 Parcelamos em até 12x | 🔒 Compra 100% segura
                         </div>
                     </div>
                 </div>
-                
-                <div class="hero-video">
+
+                <div class="hero-media">
                     <div class="video-container">
-                        <div class="video-placeholder">
-                            <div class="play-button">▶</div>
-                            <p>Assista: Como Maria eliminou seu sotaque em 21 dias</p>
+                        <div class="video-wrapper">
+                            <div style="padding:56.25% 0 0 0;position:relative;">
+                                <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                    src="https://www.youtube.com/embed/7p1DyuzEAxU?si=Hijv08m0VCCXBQmN"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="video-caption">
+                            ▶️ Assista e descubra como transformar seu sotaque em 30 dias
                         </div>
                     </div>
                 </div>
@@ -107,10 +135,10 @@
         </div>
     </section>
 
-    <!-- Social Proof -->
-    <section class="social-proof">
+    <!-- Social Proof Bar -->
+    <section class="social-proof-bar">
         <div class="container">
-            <div class="stats-grid">
+            <div class="stats-row">
                 <div class="stat-item">
                     <div class="stat-number">10.000+</div>
                     <div class="stat-label">Alunos Transformados</div>
@@ -134,38 +162,40 @@
     <!-- Problem Section -->
     <section class="problem-section">
         <div class="container">
-            <h2 class="section-title">Você Já Passou Por Isso?</h2>
-            
+            <h2 class="section-title">Você Reconhece Esses Problemas?</h2>
+
             <div class="problems-grid">
-                <div class="problem-item">
+                <div class="problem-card">
                     <div class="problem-icon">😰</div>
                     <h3>Vergonha de Falar</h3>
-                    <p>Você sabe inglês, mas tem medo de falar porque seu sotaque brasileiro é muito forte</p>
+                    <p>Você sabe inglês, mas evita falar porque seu sotaque brasileiro é muito forte e isso te deixa
+                        inseguro</p>
                 </div>
-                
-                <div class="problem-item">
+
+                <div class="problem-card">
                     <div class="problem-icon">🤔</div>
                     <h3>Não Te Entendem</h3>
-                    <p>As pessoas pedem para repetir o que você disse várias vezes</p>
+                    <p>As pessoas pedem para repetir o que você disse várias vezes, mesmo quando você fala devagar</p>
                 </div>
-                
-                <div class="problem-item">
+
+                <div class="problem-card">
                     <div class="problem-icon">😔</div>
                     <h3>Perdeu Oportunidades</h3>
-                    <p>Já perdeu chances de emprego ou promoção por causa do seu inglês</p>
+                    <p>Já perdeu chances de emprego, promoção ou negócios internacionais por causa do seu inglês</p>
                 </div>
-                
-                <div class="problem-item">
+
+                <div class="problem-card">
                     <div class="problem-icon">😤</div>
                     <h3>Frustração Constante</h3>
-                    <p>Estuda há anos mas ainda soa como brasileiro falando inglês</p>
+                    <p>Estuda há anos mas ainda soa como brasileiro falando inglês, sem conseguir soar natural</p>
                 </div>
             </div>
-            
+
             <div class="problem-conclusion">
-                <h3>O Problema NÃO é Você!</h3>
-                <p>O problema é que <strong>ninguém te ensinou a técnica correta</strong> para eliminar o sotaque brasileiro. 
-                Até hoje, você só aprendeu gramática e vocabulário, mas nunca trabalhou especificamente a pronúncia americana.</p>
+                <h3>🎯 O Problema NÃO é Você!</h3>
+                <p>O problema é que <strong>ninguém te ensinou a técnica correta</strong> para eliminar o sotaque
+                    brasileiro. Até hoje, você só aprendeu gramática e vocabulário, mas nunca trabalhou especificamente
+                    a pronúncia americana com um método científico comprovado.</p>
             </div>
         </div>
     </section>
@@ -174,44 +204,60 @@
     <section class="solution-section" id="como-funciona">
         <div class="container">
             <h2 class="section-title">A Solução Que Você Estava Procurando</h2>
-            
+
             <div class="solution-intro">
                 <h3>O Método Accent é Diferente de Tudo Que Você Já Viu</h3>
-                <p>Desenvolvido por especialistas em fonética americana, nosso método foca exclusivamente em eliminar o sotaque brasileiro e desenvolver a pronúncia nativa americana.</p>
+                <p>Desenvolvido por especialistas em fonética americana, nosso método foca exclusivamente em eliminar o
+                    sotaque brasileiro e desenvolver a pronúncia nativa americana através de técnicas científicas
+                    comprovadas.</p>
             </div>
-            
+
             <div class="method-steps">
-                <div class="step-item">
+                <div class="step-card">
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <h4>Diagnóstico Personalizado</h4>
-                        <p>Identificamos exatamente quais sons brasileiros você precisa eliminar</p>
+                        <p>Identificamos exatamente quais sons brasileiros você precisa eliminar e criamos um plano
+                            personalizado para sua transformação</p>
                     </div>
+                    <div class="step-icon">🔍</div>
                 </div>
-                
-                <div class="step-item">
+
+                <div class="step-card">
                     <div class="step-number">2</div>
                     <div class="step-content">
                         <h4>Treinamento Muscular</h4>
-                        <p>Exercícios específicos para treinar sua boca a produzir sons americanos</p>
+                        <p>Exercícios específicos para treinar sua boca, língua e músculos faciais a produzir sons
+                            americanos naturalmente</p>
                     </div>
+                    <div class="step-icon">💪</div>
                 </div>
-                
-                <div class="step-item">
+
+                <div class="step-card">
                     <div class="step-number">3</div>
                     <div class="step-content">
                         <h4>Prática Intensiva</h4>
-                        <p>Repetição guiada com feedback imediato para fixar a pronúncia correta</p>
+                        <p>Repetição guiada com feedback imediato usando nossa tecnologia exclusiva para fixar a
+                            pronúncia correta</p>
                     </div>
+                    <div class="step-icon">🎯</div>
                 </div>
-                
-                <div class="step-item">
+
+                <div class="step-card">
                     <div class="step-number">4</div>
                     <div class="step-content">
                         <h4>Automatização</h4>
-                        <p>Torna a pronúncia americana natural e automática em suas conversas</p>
+                        <p>Torna a pronúncia americana natural e automática em suas conversas do dia a dia, sem esforço
+                            consciente</p>
                     </div>
+                    <div class="step-icon">⚡</div>
                 </div>
+            </div>
+
+            <div class="cta-intermediate">
+                <button class="cta-button secondary" onclick="scrollToOffer()">
+                    ✅ QUERO COMEÇAR MINHA TRANSFORMAÇÃO
+                </button>
             </div>
         </div>
     </section>
@@ -219,49 +265,127 @@
     <!-- Testimonials -->
     <section class="testimonials-section" id="depoimentos">
         <div class="container">
-            <h2 class="section-title">O Que Nossos Alunos Estão Dizendo</h2>
-            
+            <h2 class="section-title">Resultados Reais de Pessoas Reais</h2>
+
             <div class="testimonials-grid">
-                <div class="testimonial-item">
-                    <div class="testimonial-content">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <p>"Em 3 semanas meu sotaque mudou completamente. Agora os americanos pensam que sou nativa!"</p>
-                        <div class="testimonial-author">
-                            <strong>Maria Silva</strong> - Engenheira
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=80&h=80&fit=crop&crop=face"
+                                alt="Maria Silva" loading="lazy">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Maria Silva</h4>
+                            <p>Engenheira de Software</p>
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="testimonial-item">
                     <div class="testimonial-content">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <p>"Consegui a promoção que queria! Meu chefe ficou impressionado com meu inglês na reunião internacional."</p>
-                        <div class="testimonial-author">
-                            <strong>Carlos Santos</strong> - Gerente de TI
-                        </div>
+                        <p>"Em apenas 3 semanas meu sotaque mudou completamente. Agora os americanos pensam que sou
+                            nativa! Consegui a promoção que queria para liderar o time internacional."</p>
                     </div>
                 </div>
-                
-                <div class="testimonial-item">
-                    <div class="testimonial-content">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <p>"Método revolucionário! Estudei inglês por 10 anos e só agora consegui eliminar meu sotaque brasileiro."</p>
-                        <div class="testimonial-author">
-                            <strong>Ana Costa</strong> - Médica
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face"
+                                alt="Carlos Santos" loading="lazy">
                         </div>
+                        <div class="testimonial-info">
+                            <h4>Carlos Santos</h4>
+                            <p>Gerente de TI</p>
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"Consegui a promoção que queria! Meu chefe ficou impressionado com meu inglês na reunião
+                            internacional. O método realmente funciona, é científico e eficaz."</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=80&h=80&fit=crop&crop=face"
+                                alt="Ana Costa" loading="lazy">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Ana Costa</h4>
+                            <p>Médica</p>
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"Método revolucionário! Estudei inglês por 10 anos e só agora consegui eliminar meu sotaque
+                            brasileiro. Agora atendo pacientes internacionais com total confiança."</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face"
+                                alt="Roberto Lima" loading="lazy">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Roberto Lima</h4>
+                            <p>Empresário</p>
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"Fechei meu primeiro contrato internacional depois de aplicar o método. Os investidores
+                            americanos ficaram impressionados com minha apresentação. Valeu cada centavo!"</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face"
+                                alt="Juliana Ferreira" loading="lazy">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Juliana Ferreira</h4>
+                            <p>Professora</p>
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"Como professora de inglês, posso dizer que este método é único. Meus alunos notaram a
+                            diferença imediatamente. Agora ensino com muito mais autoridade e confiança."</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face"
+                                alt="Fernando Oliveira" loading="lazy">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Fernando Oliveira</h4>
+                            <p>Advogado</p>
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"Trabalho com clientes internacionais e sempre tive vergonha do meu sotaque. Em 1 mês, tudo
+                            mudou. Agora falo com total naturalidade e confiança em qualquer situação."</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Offer Section -->
+    <!-- Main Offer Section -->
     <section class="offer-section" id="oferta">
         <div class="container">
-            <div class="offer-box">
+            <div class="offer-container">
                 <div class="offer-header">
-                    <h2>🎯 OFERTA ESPECIAL - APENAS HOJE!</h2>
-                    <div class="countdown">
+                    <h2>🎯 OFERTA ESPECIAL - TERMINA EM BREVE!</h2>
+                    <div class="countdown-main">
                         <div class="countdown-item">
                             <span class="countdown-number" id="hours">23</span>
                             <span class="countdown-label">Horas</span>
@@ -276,52 +400,122 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="offer-content">
-                    <h3>Método Accent Completo</h3>
-                    
+                    <h3>🚀 Método Accent Pro</h3>
+                    <p class="offer-subtitle">Tudo que você precisa para dominar o sotaque americano em 30 dias</p>
+
                     <div class="offer-includes">
-                        <h4>✅ Você Recebe:</h4>
-                        <ul>
-                            <li>✅ Curso Completo Método Accent (12 módulos)</li>
-                            <li>✅ App Exclusivo para Prática Diária</li>
-                            <li>✅ Grupo VIP no WhatsApp</li>
-                            <li>✅ Certificado de Conclusão</li>
-                            <li>✅ Suporte Direto por 90 dias</li>
-                        </ul>
+                        <h4>✅ O Que Você Vai Receber:</h4>
+                        <div class="includes-grid">
+                            <div class="include-item">
+                                <div class="include-icon">📚</div>
+                                <div class="include-content">
+                                    <h5>Curso Completo Método Accent</h5>
+                                    <p>12 módulos progressivos com mais de 50 aulas práticas</p>
+                                </div>
+                            </div>
+                            <div class="include-item">
+                                <div class="include-icon">👥</div>
+                                <div class="include-content">
+                                    <h5>Grupo VIP no WhatsApp</h5>
+                                    <p>Comunidade exclusiva com suporte direto dos instrutores</p>
+                                </div>
+                            </div>
+                            <div class="include-item">
+                                <div class="include-icon">🏆</div>
+                                <div class="include-content">
+                                    <h5>Certificado de Conclusão</h5>
+                                    <p>Certificado internacional reconhecido por empresas</p>
+                                </div>
+                            </div>
+                            <div class="include-item">
+                                <div class="include-icon">🎧</div>
+                                <div class="include-content">
+                                    <h5>Suporte Direto por 90 Dias</h5>
+                                    <p>Acesso direto aos especialistas para tirar dúvidas</p>
+                                </div>
+                            </div>
+                            <div class="include-item">
+                                <div class="include-icon">🔄</div>
+                                <div class="include-content">
+                                    <h5>Atualizações Vitalícias</h5>
+                                    <p>Acesso a todas as futuras atualizações do método</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    
+
                     <div class="bonus-section">
-                        <h4>🎁 BÔNUS EXCLUSIVOS (Valor: R$ 597)</h4>
-                        <ul>
-                            <li>🎁 E-book: "50 Expressões Americanas Essenciais"</li>
-                            <li>🎁 Masterclass: "Como Fazer Networking em Inglês"</li>
-                            <li>🎁 Template de Currículo em Inglês</li>
-                        </ul>
+                        <h4>🎁 BÔNUS EXCLUSIVOS</h4>
+                        <div class="bonus-grid">
+                            <div class="bonus-item">
+                                <div class="bonus-icon">📖</div>
+                                <div class="bonus-content">
+                                    <h5>E-book: "50 Expressões Americanas Essenciais"</h5>
+                                    <p class="bonus-value">Valor: R$ 97</p>
+                                </div>
+                            </div>
+                            <div class="bonus-item">
+                                <div class="bonus-icon">🎤</div>
+                                <div class="bonus-content">
+                                    <h5>Masterclass: "Como Fazer Networking em Inglês"</h5>
+                                    <p class="bonus-value">Valor: R$ 197</p>
+                                </div>
+                            </div>
+                            <div class="bonus-item">
+                                <div class="bonus-icon">📄</div>
+                                <div class="bonus-content">
+                                    <h5>Template de Currículo em Inglês Profissional</h5>
+                                    <p class="bonus-value">Valor: R$ 97</p>
+                                </div>
+                            </div>
+                            <div class="bonus-item">
+                                <div class="bonus-icon">🎯</div>
+                                <div class="bonus-content">
+                                    <h5>Guia: "Como Conseguir Emprego no Exterior"</h5>
+                                    <p class="bonus-value">Valor: R$ 127</p>
+                                </div>
+                            </div>
+                            <div class="bonus-item">
+                                <div class="bonus-icon">💼</div>
+                                <div class="bonus-content">
+                                    <h5>Scripts para Entrevistas Internacionais</h5>
+                                    <p class="bonus-value">Valor: R$ 79</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    
+
                     <div class="price-comparison">
-                        <div class="price-old">
-                            <span class="label">Valor Normal:</span>
-                            <span class="value">R$ 1.094</span>
-                        </div>
-                        <div class="price-current">
-                            <span class="label">Hoje Apenas:</span>
-                            <span class="value">R$ 197</span>
-                        </div>
-                        <div class="savings">
-                            Você Economiza: R$ 897 (82% OFF)
+                        <div class="price-offer">
+                            <div class="price-today">
+                                <span class="price-label">Metodo Accent Pro:</span>
+                                <span class="price-value">R$ 67</span>
+                            </div>
                         </div>
                     </div>
-                    
-                    <button class="cta-button mega" onclick="checkout()">
-                        🚀 SIM! QUERO O MÉTODO ACCENT AGORA
-                        <span class="button-subtitle">Acesso imediato + Garantia de 30 dias</span>
-                    </button>
-                    
+
+                    <div class="cta-main">
+                        <button class="cta-button mega" onclick="checkout()">
+                            🚀 SIM! QUERO O MÉTODO ACCENT PRO
+                            <span class="button-subtitle">Acesso imediato + Garantia de 30 dias</span>
+                        </button>
+                    </div>
+
                     <div class="payment-options">
-                        <p>💳 Parcelamos em até 12x no cartão</p>
-                        <p>🔒 Compra 100% segura e protegida</p>
+                        <div class="payment-item">
+                            <span class="payment-icon">💳</span>
+                            <span>Parcelamos em até 12x no cartão</span>
+                        </div>
+                        <div class="payment-item">
+                            <span class="payment-icon">🔒</span>
+                            <span>Compra 100% segura e protegida</span>
+                        </div>
+                        <div class="payment-item">
+                            <span class="payment-icon">⚡</span>
+                            <span>Acesso liberado em até 5 minutos</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -334,17 +528,27 @@
             <div class="guarantee-content">
                 <div class="guarantee-badge">
                     <div class="badge-icon">🛡️</div>
-                    <div class="badge-text">
-                        <h3>Garantia Incondicional de 30 Dias</h3>
+                    <div class="badge-content">
+                        <h3>Garantia Blindada de 30 Dias</h3>
                         <p>100% do seu dinheiro de volta</p>
                     </div>
                 </div>
-                
+
                 <div class="guarantee-text">
                     <h4>Nossa Promessa Para Você:</h4>
-                    <p>Se em 30 dias você não notar uma melhora significativa no seu sotaque, ou se por qualquer motivo não ficar satisfeito, devolvemos 100% do seu investimento. Sem perguntas, sem burocracia.</p>
-                    
-                    <p><strong>Você não tem nada a perder e um futuro brilhante a ganhar!</strong></p>
+                    <p>Se em 30 dias você não notar uma melhora significativa no seu sotaque, ou se por qualquer motivo
+                        não ficar 100% satisfeito com o Método Accent, devolvemos todo o seu investimento.</p>
+
+                    <p><strong>Sem perguntas, sem burocracia, sem complicação.</strong></p>
+
+                    <p>Estamos tão confiantes nos resultados do nosso método que assumimos todo o risco para você. Você
+                        só tem a ganhar!</p>
+                </div>
+
+                <div class="guarantee-cta">
+                    <button class="cta-button secondary" onclick="scrollToOffer()">
+                        ✅ QUERO GARANTIR MINHA VAGA SEM RISCO
+                    </button>
                 </div>
             </div>
         </div>
@@ -354,69 +558,133 @@
     <section class="faq-section">
         <div class="container">
             <h2 class="section-title">Perguntas Frequentes</h2>
-            
-            <div class="faq-list">
+
+            <div class="faq-container">
                 <div class="faq-item">
                     <div class="faq-question">
                         <h4>Quanto tempo leva para ver resultados?</h4>
-                        <span class="faq-toggle">+</span>
+                        <span class="faq-icon">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>A maioria dos nossos alunos nota melhorias significativas já na primeira semana. Em 30 dias, você terá transformado completamente seu sotaque.</p>
+                        <p>A maioria dos nossos alunos nota melhorias significativas já na primeira semana. Em 30 dias,
+                            você terá transformado completamente seu sotaque. O método é progressivo e você verá
+                            evolução constante a cada dia.</p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item">
                     <div class="faq-question">
                         <h4>Funciona para qualquer nível de inglês?</h4>
-                        <span class="faq-toggle">+</span>
+                        <span class="faq-icon">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>Sim! O método funciona desde iniciantes até avançados. O foco é especificamente na pronúncia, não na gramática.</p>
+                        <p>Sim! O Método Accent foi desenvolvido para funcionar desde o nível básico até o avançado.
+                            Nosso foco é especificamente na pronúncia e sotaque, não na gramática. Se você consegue
+                            formar frases básicas em inglês, o método funcionará para você.</p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4>Preciso dedicar muito tempo por dia?</h4>
-                        <span class="faq-toggle">+</span>
+                        <h4>Preciso de muito tempo por dia para praticar?</h4>
+                        <span class="faq-icon">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>Apenas 15-20 minutos por dia são suficientes. O método é otimizado para pessoas ocupadas.</p>
+                        <p>Não! O método foi desenvolvido para pessoas ocupadas. Com apenas 15-20 minutos por dia você
+                            já consegue resultados excelentes. O importante é a consistência, não a quantidade de horas.
+                        </p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4>E se eu não conseguir acompanhar?</h4>
-                        <span class="faq-toggle">+</span>
+                        <h4>E se eu não conseguir eliminar meu sotaque?</h4>
+                        <span class="faq-icon">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>Você terá suporte direto por 90 dias e acesso ao grupo VIP para tirar todas as dúvidas.</p>
+                        <p>Temos 98% de taxa de sucesso, mas se por algum motivo você não conseguir resultados,
+                            devolvemos 100% do seu dinheiro em até 30 dias. Assumimos todo o risco para você ter a
+                            tranquilidade de testar o método.</p>
                     </div>
                 </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>O método funciona online ou preciso ir presencialmente?</h4>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>É 100% online! Você pode acessar de qualquer lugar do mundo, no seu ritmo. Temos app para
+                            celular e plataforma web. Você estuda quando e onde quiser, sem horários fixos.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Vou ter suporte se tiver dúvidas?</h4>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Claro! Você terá acesso ao nosso grupo VIP no WhatsApp e suporte direto com os instrutores
+                            por 90 dias. Nunca ficará sozinho na sua jornada de transformação.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Posso parcelar o pagamento?</h4>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim! Você pode parcelar em até 12x no cartão de crédito. Também aceitamos PIX,
+                            boleto e cartão de débito. Escolha a forma que for melhor para você.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Por quanto tempo terei acesso ao curso?</h4>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O acesso é vitalício! Você poderá revisar o conteúdo sempre que quiser e receberá todas as
+                            atualizações futuras do método sem custo adicional.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-cta">
+                <p>Ainda tem dúvidas? <a href="#oferta" class="link-highlight">Aproveite a garantia de 30 dias e teste
+                        sem risco!</a></p>
+                <button class="cta-button secondary" onclick="scrollToOffer()">
+                    🚀 QUERO COMEÇAR AGORA
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class="final-cta">
+    <!-- Final CTA Section -->
+    <section class="final-cta-section">
         <div class="container">
             <div class="final-cta-content">
-                <h2>Não Deixe Seu Sotaque Limitar Seu Futuro</h2>
-                <p>Milhares de brasileiros já transformaram suas vidas com o Método Accent. 
-                <strong>Sua vez chegou!</strong></p>
-                
-                <div class="urgency-text">
-                    ⚠️ Esta oferta expira em poucas horas e o preço voltará para R$ 497
+                <h2>⏰ Última Chance - Oferta Expira em Breve!</h2>
+                <p>Não deixe essa oportunidade passar. Milhares de brasileiros já transformaram suas carreiras com o
+                    Método Accent. <strong>Seja o próximo!</strong></p>
+
+                <div class="final-benefits">
+                    <div class="final-benefit">✅ Método científico comprovado</div>
+                    <div class="final-benefit">✅ Mais de 10.000 alunos transformados</div>
+                    <div class="final-benefit">✅ Garantia total de 30 dias</div>
+                    <div class="final-benefit">✅ Suporte completo incluído</div>
                 </div>
-                
-                <button class="cta-button final" onclick="checkout()">
-                    🔥 GARANTIR MINHA VAGA AGORA - R$ 197
+
+                <button class="cta-button mega final" onclick="checkout()">
+                    🚀 SIM! QUERO TRANSFORMAR MEU INGLÊS AGORA
+                    <span class="button-subtitle">Por apenas R$ 27 (92% OFF)</span>
                 </button>
-                
-                <div class="final-guarantee">
-                    ✅ Garantia de 30 dias | ✅ Acesso imediato | ✅ Suporte completo
+
+                <div class="urgency-final">
+                    ⚠️ Restam apenas <span id="countdown-final">23:59:45</span> para garantir este preço especial
                 </div>
             </div>
         </div>
@@ -426,26 +694,51 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <h3>Método Accent</h3>
-                    <p>Transformando brasileiros em falantes nativos de inglês</p>
+                <div class="footer-section">
+                    <h4>Método Accent</h4>
+                    <p>Transformando brasileiros em falantes nativos de inglês desde 2020.</p>
                 </div>
-                
-                <div class="footer-links">
-                    <a href="#termos">Termos de Uso</a>
-                    <a href="#privacidade">Política de Privacidade</a>
-                    <a href="#contato">Contato</a>
+
+                <div class="footer-section">
+                    <h4>Links Importantes</h4>
+                    <ul>
+                        <li><a href="#como-funciona">Como Funciona</a></li>
+                        <li><a href="#depoimentos">Depoimentos</a></li>
+                        <li><a href="#garantia">Garantia</a></li>
+                        <li><a href="#oferta">Oferta Especial</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="mailto:suporte@metodoaccent.com">suporte@metodoaccent.com</a></li>
+                        <li><a href="tel:+5511999999999">(11) 99999-9999</a></li>
+                        <li><a href="#">Central de Ajuda</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Política de Reembolso</a></li>
+                    </ul>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
-                <p>&copy; 2025 Método Accent. Todos os direitos reservados.</p>
+                <p>&copy; 2024 Método Accent. Todos os direitos reservados.</p>
+                <p>CNPJ: 00.000.000/0001-00 | Este site não é afiliado ao Facebook, Google ou qualquer outra empresa
+                    mencionada.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
+    <script src="https://player.vimeo.com/api/player.js"></script>
     <script src="script.js"></script>
 </body>
-</html>
 
+</html>
